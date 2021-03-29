@@ -22,6 +22,10 @@ p {
   margin: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 body {
   background: url(../img/img27.jpg);
   background-size: cover;
@@ -40,7 +44,7 @@ body {
   background: #00000081;
   border-radius: 30px;
   margin: 40px 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
@@ -93,13 +97,27 @@ body {
   background: #00000081;
   border-radius: 30px;
   margin: 40px 20px;
-  padding: 20px;
+  padding: 10px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
   .main .search {
     margin: 20px 10px;
   }
+}
+
+.main .search .navbar-toggler {
+  width: 100%;
+}
+
+.main .search .navbar-toggler-icon {
+  width: auto;
+  height: auto;
+}
+
+.main .search .navbar-toggler-icon i {
+  font-size: 25px;
+  color: white;
 }
 
 .main .search a:hover {
@@ -112,7 +130,7 @@ body {
   background: #00000081;
   border-radius: 30px;
   margin: 40px 20px;
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
   line-height: normal;
   font-family: Agency;
@@ -126,7 +144,7 @@ body {
   transition: background .5s ease;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
   .main .search p,
   .main .search input {
     font-size: 20px;
@@ -145,7 +163,7 @@ body {
   background: #00000081;
   border-radius: 30px;
   margin: 40px 20px;
-  padding: 20px;
+  padding: 10px;
   position: relative;
 }
 
@@ -189,7 +207,7 @@ body {
   background: #00000081;
   border-radius: 30px;
   margin: 40px 20px;
-  padding: 20px;
+  padding: 10px;
   width: 60%;
   margin: 20px auto;
   display: table;
@@ -280,6 +298,344 @@ body {
   }
 }
 
+.main .departments_list {
+  border-radius: 23px;
+  border: 2px solid black;
+  margin: 40px 20px;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .departments_list {
+    padding: 10px;
+  }
+}
+
+.main .departments_list .carousel .item {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .departments_list .carousel .item {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .departments_list .carousel .item {
+    height: 300px;
+  }
+}
+
+.main .departments_list .carousel .item .overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: 100%;
+}
+
+.main .departments_list .carousel .item .overlay .information {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.main .departments_list .carousel .item .overlay .information p {
+  background: #00000081;
+  border-radius: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 22px;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .departments_list .carousel .item .overlay .information p {
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .departments_list .carousel .item .overlay .information p {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+.main .departments_list .carousel .item .overlay .score {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+}
+
+.main .departments_list .carousel .item .overlay .score p {
+  background: #00000081;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .departments_list .carousel .item .overlay .score p {
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .departments_list .carousel .item .overlay .score p {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+.main .departments_list .carousel .item .overlay .score i {
+  padding: 0 5px;
+}
+
+.main .departments_list .carousel .item .overlay .score i.noncheck {
+  color: gray;
+}
+
+.main .departments_list .carousel .item .overlay .favorite i {
+  position: absolute;
+  bottom: 7%;
+  right: 2%;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .departments_list .carousel .item .overlay .favorite i {
+    font-size: 25px;
+    right: 3%;
+  }
+}
+
+.main .departments_list .carousel .slick-next {
+  right: 15px;
+  top: 60%;
+}
+
+.main .departments_list .carousel .slick-next:before {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .departments_list .carousel .slick-next {
+    top: 60%;
+  }
+  .main .departments_list .carousel .slick-next:before {
+    font-size: 25px;
+  }
+}
+
+.main .departments_list .carousel .slick-prev {
+  left: 15px;
+  top: 60%;
+  z-index: 99;
+}
+
+.main .departments_list .carousel .slick-prev:before {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .departments_list .carousel .slick-prev {
+    top: 60%;
+  }
+  .main .departments_list .carousel .slick-prev:before {
+    font-size: 25px;
+  }
+}
+
+.blue_banner {
+  background: #2E3192;
+  border-radius: 0 35px 35px 0;
+}
+
+.blue_banner img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .blue_banner img {
+    width: 70%;
+    margin: 0 auto;
+    display: table;
+  }
+}
+
+.blue_banner .flexi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .blue_banner .flexi {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.blue_banner .flexi .title {
+  font-size: 26px;
+  line-height: normal;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .blue_banner .flexi .title {
+    font-size: 20px;
+  }
+}
+
+.blue_banner .flexi .subtitle {
+  font-size: 32px;
+  line-height: normal;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .blue_banner .flexi .subtitle {
+    font-size: 22px;
+  }
+}
+
+.blue_banner .flexi .text {
+  font-size: 38px;
+  line-height: normal;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .blue_banner .flexi .text {
+    font-size: 30px;
+  }
+}
+
+.blue_banner .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blue_banner .cta a:hover {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .blue_banner .cta a {
+    width: 100%;
+  }
+}
+
+.blue_banner .cta a .interes {
+  border: 2px white solid;
+  border-radius: 35px;
+  padding: 10px;
+  font-size: 28px;
+  line-height: normal;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .blue_banner .cta a .interes {
+    font-size: 18px;
+  }
+}
+
+.cta_transparent {
+  background: #00000081;
+  border-radius: 30px;
+  margin: 40px 20px;
+  padding: 10px;
+  margin: 40px auto;
+}
+
+.cta_transparent .flexi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cta_transparent .flexi .credit {
+  font-size: 26px;
+  line-height: normal;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .cta_transparent .flexi .credit {
+    font-size: 20px;
+  }
+}
+
+.cta_transparent .flexi .precalifica,
+.cta_transparent .flexi .hrs {
+  font-size: 26px;
+  line-height: normal;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .cta_transparent .flexi .precalifica,
+  .cta_transparent .flexi .hrs {
+    font-size: 20px;
+  }
+}
+
 footer {
   background: white;
   padding: 20px 0;
@@ -303,6 +659,12 @@ footer .social_icons img {
   width: 80px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  footer .social_icons img {
+    width: 60px;
+  }
+}
+
 footer .title {
   font-size: 80px;
   line-height: normal;
@@ -312,7 +674,7 @@ footer .title {
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
   footer .title {
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
   }
 }
@@ -325,7 +687,7 @@ footer .subtitle {
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
   footer .subtitle {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
   }
 }
@@ -337,7 +699,7 @@ footer .copyrigth {
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
   footer .copyrigth {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
   }
 }
@@ -351,7 +713,7 @@ footer .cta p {
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
   footer .cta p {
-    font-size: 28px;
+    font-size: 22px;
     text-align: center;
   }
 }

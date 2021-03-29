@@ -2,11 +2,17 @@ p {
     margin: 0;
 }
 
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 @mixin round_bg {
     background: $black-soft;
     border-radius: 30px;
     margin: 40px 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 body {
@@ -60,6 +66,17 @@ body {
         #{$sm-device} {
             margin: 20px 10px;
         }
+        .navbar-toggler {
+            width: 100%;
+        }
+        .navbar-toggler-icon {
+            width: auto;
+            height: auto;
+            i {
+                font-size: 25px;
+                color: white;
+            }
+        }
         a {
             &:hover {
                 text-decoration: none;
@@ -79,7 +96,8 @@ body {
             width: 100%;
             border: none;
             transition: background .5s ease;
-            @media #{$md-device} {
+            @media #{$md-device},
+            #{$sm-device} {
                 font-size: 20px;
             }
             &:hover {
@@ -181,6 +199,251 @@ body {
             }
         }
     }
+    .departments_list {
+        border-radius: 23px;
+        border: 2px solid black;
+        margin: 40px 20px;
+        padding: 20px;
+        @media #{$md-device},
+        #{$sm-device} {
+            padding: 10px;
+        }
+        .carousel {
+            .item {
+                height: 500px;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                @media #{$md-device} {
+                    height: 350px;
+                }
+                @media #{$sm-device} {
+                    height: 300px;
+                }
+                .overlay {
+                    position: relative;
+                    background-color: rgba(0, 0, 0, 0.35);
+                    height: 100%;
+                    width: 100%;
+                    .information {
+                        position: absolute;
+                        top: 5%;
+                        left: 3%;
+                        p {
+                            background: $black-soft;
+                            border-radius: 30px;
+                            margin: 10px 0;
+                            padding: 10px;
+                            font-size: 22px;
+                            font-family: Agency;
+                            color: white;
+                            text-align: center;
+                            @media #{$md-device} {
+                                font-size: 18px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                            @media #{$sm-device} {
+                                font-size: 16px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                    .score {
+                        position: absolute;
+                        bottom: 5%;
+                        left: 3%;
+                        p {
+                            background: $black-soft;
+                            border-radius: 30px;
+                            padding: 10px;
+                            font-size: 24px;
+                            font-family: Agency;
+                            color: white;
+                            text-align: center;
+                            @media #{$md-device} {
+                                font-size: 18px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                            @media #{$sm-device} {
+                                font-size: 16px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                        }
+                        i {
+                            padding: 0 5px;
+                        }
+                        i.noncheck {
+                            color: gray;
+                        }
+                    }
+                    .favorite {
+                        i {
+                            position: absolute;
+                            bottom: 7%;
+                            right: 2%;
+                            color: white;
+                            font-size: 40px;
+                            cursor: pointer;
+                            @media #{$md-device},
+                            #{$sm-device} {
+                                font-size: 25px;
+                                right: 3%;
+                            }
+                        }
+                    }
+                }
+            }
+            .slick-next {
+                right: 15px;
+                top: 60%;
+                &:before {
+                    font-size: 30px;
+                }
+                @media #{$md-device},
+                #{$sm-device} {
+                    top: 60%;
+                    &:before {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .slick-prev {
+                left: 15px;
+                top: 60%;
+                z-index: 99;
+                &:before {
+                    font-size: 30px;
+                }
+                @media #{$md-device},
+                #{$sm-device} {
+                    top: 60%;
+                    &:before {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blue_banner {
+    background: #2E3192;
+    border-radius: 0 35px 35px 0;
+    img {
+        width: 100%;
+        @media #{$md-device} {
+            width: 70%;
+            margin: 0 auto;
+            display: table;
+        }
+    }
+    .flexi {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        @media #{$md-device} {
+            align-items: flex-start;
+        }
+        .title {
+            font-size: 26px;
+            line-height: normal;
+            font-family: Agency;
+            color: white;
+            text-align: center;
+            @media #{$md-device},
+            #{$sm-device} {
+                font-size: 20px;
+            }
+        }
+        .subtitle {
+            font-size: 32px;
+            line-height: normal;
+            font-family: Agency;
+            color: white;
+            text-align: center;
+            @media #{$md-device},
+            #{$sm-device} {
+                font-size: 22px;
+            }
+        }
+        .text {
+            font-size: 38px;
+            line-height: normal;
+            font-family: Agency;
+            color: white;
+            text-align: center;
+            @media #{$md-device},
+            #{$sm-device} {
+                font-size: 30px;
+            }
+        }
+    }
+    .cta {
+        display: flex;
+        align-items: center;
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+            @media #{$sm-device} {
+                width: 100%;
+            }
+            .interes {
+                border: 2px white solid;
+                border-radius: 35px;
+                padding: 10px;
+                font-size: 28px;
+                line-height: normal;
+                font-family: Agency;
+                color: white;
+                text-align: center;
+                @media #{$md-device},
+                #{$sm-device} {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.cta_transparent {
+    @include round_bg;
+    margin: 40px auto;
+    .flexi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .credit {
+            font-size: 26px;
+            line-height: normal;
+            font-family: Agency;
+            color: white;
+            text-align: center;
+            @media #{$md-device},
+            #{$sm-device} {
+                font-size: 20px;
+            }
+        }
+        .precalifica,
+        .hrs {
+            font-size: 26px;
+            line-height: normal;
+            font-family: Agency;
+            color: white;
+            text-align: center;
+            @media #{$md-device},
+            #{$sm-device} {
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 footer {
@@ -195,6 +458,10 @@ footer {
         }
         img {
             width: 80px;
+            @media #{$md-device},
+            #{$sm-device} {
+                width: 60px;
+            }
         }
     }
     .title {
@@ -204,7 +471,7 @@ footer {
         font-family: ERKN;
         @media #{$md-device},
         #{$sm-device} {
-            font-size: 60px;
+            font-size: 40px;
             text-align: center;
         }
     }
@@ -214,7 +481,7 @@ footer {
         font-family: ERKN;
         @media #{$md-device},
         #{$sm-device} {
-            font-size: 30px;
+            font-size: 20px;
             text-align: center;
         }
     }
@@ -223,7 +490,7 @@ footer {
         font-family: Agency;
         @media #{$md-device},
         #{$sm-device} {
-            font-size: 18px;
+            font-size: 16px;
             text-align: center;
         }
     }
@@ -235,7 +502,7 @@ footer {
             font-weight: 500;
             @media #{$md-device},
             #{$sm-device} {
-                font-size: 28px;
+                font-size: 22px;
                 text-align: center;
             }
             a {
