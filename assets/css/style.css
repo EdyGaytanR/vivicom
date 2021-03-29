@@ -47,9 +47,15 @@ body {
   padding: 10px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main .top_head {
     margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .top_head {
+    margin: 20px 0;
   }
 }
 
@@ -100,9 +106,15 @@ body {
   padding: 10px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main .search {
     margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .search {
+    margin: 20px 0;
   }
 }
 
@@ -165,6 +177,18 @@ body {
   margin: 40px 20px;
   padding: 10px;
   position: relative;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .banner_cta {
+    margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .banner_cta {
+    margin: 20px 0;
+  }
 }
 
 .main .banner_cta .title {
@@ -305,9 +329,17 @@ body {
   padding: 20px;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
   .main .departments_list {
     padding: 10px;
+    margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .departments_list {
+    padding: 10px;
+    margin: 20px 0;
   }
 }
 
@@ -460,6 +492,464 @@ body {
     top: 60%;
   }
   .main .departments_list .carousel .slick-prev:before {
+    font-size: 25px;
+  }
+}
+
+.main .department_info {
+  border-radius: 23px;
+  border: 2px solid black;
+  margin: 40px 20px;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info {
+    padding: 10px;
+    margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info {
+    padding: 10px;
+    margin: 20px 0;
+  }
+}
+
+.main .department_info .carousel .item {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item {
+    height: 300px;
+  }
+}
+
+.main .department_info .carousel .item .overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: 100%;
+}
+
+.main .department_info .carousel .item .overlay .information {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item .overlay .information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .department_info .carousel .item .overlay .information p {
+  background: #00000081;
+  border-radius: 30px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item .overlay .information p {
+    font-size: 18px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item .overlay .information p {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+.main .department_info .carousel .item .overlay .rooms {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  background-color: #0071BC;
+  border-radius: 20px;
+  color: white;
+}
+
+.main .department_info .carousel .item .overlay .rooms p {
+  padding: 5px;
+  text-align: center;
+}
+
+.main .department_info .carousel .item .overlay .rooms p:nth-child(2n) {
+  background-color: #00000079;
+  border-radius: 20px;
+}
+
+.main .department_info .carousel .item .overlay .score {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+}
+
+.main .department_info .carousel .item .overlay .score p {
+  background: #00000081;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item .overlay .score p {
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item .overlay .score p {
+    font-size: 16px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+.main .department_info .carousel .item .overlay .score i {
+  padding: 0 5px;
+}
+
+.main .department_info .carousel .item .overlay .score i.noncheck {
+  color: gray;
+}
+
+.main .department_info .carousel .item .overlay .favorite i {
+  position: absolute;
+  bottom: 7%;
+  right: 2%;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item .overlay .favorite i {
+    font-size: 25px;
+    right: 3%;
+  }
+}
+
+.main .department_info .carousel .item_map {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item_map {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map {
+    height: 300px;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: 100%;
+}
+
+.main .department_info .carousel .item_map .overlay .information {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .information {
+    display: none;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .information p {
+  background: #00000081;
+  border-radius: 30px;
+  margin: 5px;
+  padding: 5px;
+  font-size: 22px;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item_map .overlay .information p {
+    font-size: 18px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .information p {
+    font-size: 16px;
+    padding: 5px;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .rooms {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  background-color: #0071BC;
+  border-radius: 20px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .rooms {
+    display: none;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .rooms p {
+  padding: 5px;
+  text-align: center;
+}
+
+.main .department_info .carousel .item_map .overlay .rooms p:nth-child(2n) {
+  background-color: #00000079;
+  border-radius: 20px;
+}
+
+.main .department_info .carousel .item_map .overlay .score {
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .score {
+    display: none;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .score p {
+  background: #00000081;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 24px;
+  font-family: Agency;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item_map .overlay .score p {
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .score i {
+  padding: 0 5px;
+}
+
+.main .department_info .carousel .item_map .overlay .score i.noncheck {
+  color: gray;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .favorite {
+    display: none;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .favorite i {
+  position: absolute;
+  bottom: 7%;
+  right: 2%;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .favorite i {
+    font-size: 25px;
+    right: 3%;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay iframe {
+  width: 65%;
+  height: 500px;
+  margin-left: auto;
+  display: table;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item_map .overlay iframe {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay iframe {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .cta_buttons {
+  position: absolute;
+  top: 55%;
+  left: 35%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .cta_buttons {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .cta_buttons button {
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  font-size: 45px;
+  font-family: ERKN;
+  border: 2px solid white;
+  padding: 10px 20px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  .main .department_info .carousel .item_map .overlay .cta_buttons button {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .cta_buttons button {
+    font-size: 20px;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .images {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+  .main .department_info .carousel .item_map .overlay .images {
+    top: 15%;
+    left: 27%;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .images {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main .department_info .carousel .item_map .overlay .images .img_carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .department_info .carousel .item_map .overlay .images .img_carousel img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .item_map .overlay .images .img_carousel img {
+    height: 210px;
+  }
+}
+
+.main .department_info .carousel .slick-next {
+  right: 15px;
+  top: 60%;
+}
+
+.main .department_info .carousel .slick-next:before {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .slick-next {
+    top: 60%;
+  }
+  .main .department_info .carousel .slick-next:before {
+    font-size: 25px;
+  }
+}
+
+.main .department_info .carousel .slick-prev {
+  left: 15px;
+  top: 60%;
+  z-index: 99;
+}
+
+.main .department_info .carousel .slick-prev:before {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px), only screen and (max-width: 767.98px) {
+  .main .department_info .carousel .slick-prev {
+    top: 60%;
+  }
+  .main .department_info .carousel .slick-prev:before {
     font-size: 25px;
   }
 }

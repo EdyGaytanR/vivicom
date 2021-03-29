@@ -29,9 +29,11 @@ body {
     margin-bottom: 30px;
     .top_head {
         @include round_bg;
-        @media #{$md-device},
-        #{$sm-device} {
+        @media #{$md-device} {
             margin: 20px 10px;
+        }
+        @media #{$sm-device} {
+            margin: 20px 0;
         }
         .title {
             font-size: 80px;
@@ -62,9 +64,11 @@ body {
     }
     .search {
         @include round_bg;
-        @media #{$md-device},
-        #{$sm-device} {
+        @media #{$md-device} {
             margin: 20px 10px;
+        }
+        @media #{$sm-device} {
+            margin: 20px 0;
         }
         .navbar-toggler {
             width: 100%;
@@ -110,6 +114,12 @@ body {
     .banner_cta {
         @include round_bg;
         position: relative;
+        @media #{$md-device} {
+            margin: 20px 10px;
+        }
+        @media #{$sm-device} {
+            margin: 20px 0;
+        }
         .title {
             font-size: 40px;
             line-height: normal;
@@ -204,9 +214,13 @@ body {
         border: 2px solid black;
         margin: 40px 20px;
         padding: 20px;
-        @media #{$md-device},
-        #{$sm-device} {
+        @media #{$md-device} {
             padding: 10px;
+            margin: 20px 10px;
+        }
+        @media #{$sm-device} {
+            padding: 10px;
+            margin: 20px 0;
         }
         .carousel {
             .item {
@@ -293,6 +307,335 @@ body {
                             #{$sm-device} {
                                 font-size: 25px;
                                 right: 3%;
+                            }
+                        }
+                    }
+                }
+            }
+            .slick-next {
+                right: 15px;
+                top: 60%;
+                &:before {
+                    font-size: 30px;
+                }
+                @media #{$md-device},
+                #{$sm-device} {
+                    top: 60%;
+                    &:before {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .slick-prev {
+                left: 15px;
+                top: 60%;
+                z-index: 99;
+                &:before {
+                    font-size: 30px;
+                }
+                @media #{$md-device},
+                #{$sm-device} {
+                    top: 60%;
+                    &:before {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .department_info {
+        border-radius: 23px;
+        border: 2px solid black;
+        margin: 40px 20px;
+        padding: 20px;
+        @media #{$md-device} {
+            padding: 10px;
+            margin: 20px 10px;
+        }
+        @media #{$sm-device} {
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .carousel {
+            .item {
+                height: 500px;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                @media #{$md-device} {
+                    height: 350px;
+                }
+                @media #{$sm-device} {
+                    height: 300px;
+                }
+                .overlay {
+                    position: relative;
+                    background-color: rgba(0, 0, 0, 0.35);
+                    height: 100%;
+                    width: 100%;
+                    .information {
+                        position: absolute;
+                        top: 5%;
+                        left: 3%;
+                        display: flex;
+                        @media #{$sm-device} {
+                            flex-direction: column;
+                        }
+                        p {
+                            background: $black-soft;
+                            border-radius: 30px;
+                            margin: 5px;
+                            padding: 5px;
+                            font-size: 22px;
+                            font-family: Agency;
+                            color: white;
+                            text-align: center;
+                            @media #{$md-device} {
+                                font-size: 18px;
+                                padding: 5px;
+                            }
+                            @media #{$sm-device} {
+                                font-size: 16px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                    .rooms {
+                        position: absolute;
+                        top: 5%;
+                        right: 2%;
+                        background-color: #0071BC;
+                        border-radius: 20px;
+                        color: white;
+                        p {
+                            padding: 5px;
+                            text-align: center;
+                            &:nth-child(2n) {
+                                background-color: #00000079;
+                                border-radius: 20px;
+                            }
+                        }
+                    }
+                    .score {
+                        position: absolute;
+                        bottom: 5%;
+                        left: 3%;
+                        p {
+                            background: $black-soft;
+                            border-radius: 30px;
+                            padding: 10px;
+                            font-size: 24px;
+                            font-family: Agency;
+                            color: white;
+                            text-align: center;
+                            @media #{$md-device} {
+                                font-size: 18px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                            @media #{$sm-device} {
+                                font-size: 16px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                        }
+                        i {
+                            padding: 0 5px;
+                        }
+                        i.noncheck {
+                            color: gray;
+                        }
+                    }
+                    .favorite {
+                        i {
+                            position: absolute;
+                            bottom: 7%;
+                            right: 2%;
+                            color: white;
+                            font-size: 40px;
+                            cursor: pointer;
+                            @media #{$md-device},
+                            #{$sm-device} {
+                                font-size: 25px;
+                                right: 3%;
+                            }
+                        }
+                    }
+                }
+            }
+            .item_map {
+                height: 500px;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                @media #{$md-device} {
+                    height: 350px;
+                }
+                @media #{$sm-device} {
+                    height: 300px;
+                }
+                .overlay {
+                    position: relative;
+                    background-color: rgba(0, 0, 0, 0.35);
+                    height: 100%;
+                    width: 100%;
+                    .information {
+                        position: absolute;
+                        top: 5%;
+                        left: 3%;
+                        @media #{$sm-device} {
+                            display: none;
+                        }
+                        p {
+                            background: $black-soft;
+                            border-radius: 30px;
+                            margin: 5px;
+                            padding: 5px;
+                            font-size: 22px;
+                            font-family: Agency;
+                            color: white;
+                            text-align: center;
+                            @media #{$md-device} {
+                                font-size: 18px;
+                                padding: 5px;
+                            }
+                            @media #{$sm-device} {
+                                font-size: 16px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                    .rooms {
+                        position: absolute;
+                        top: 5%;
+                        right: 10%;
+                        background-color: #0071BC;
+                        border-radius: 20px;
+                        color: white;
+                        display: flex;
+                        @media #{$sm-device} {
+                            display: none;
+                        }
+                        p {
+                            padding: 5px;
+                            text-align: center;
+                            &:nth-child(2n) {
+                                background-color: #00000079;
+                                border-radius: 20px;
+                            }
+                        }
+                    }
+                    .score {
+                        position: absolute;
+                        bottom: 5%;
+                        left: 3%;
+                        @media #{$sm-device} {
+                            display: none;
+                        }
+                        p {
+                            background: $black-soft;
+                            border-radius: 30px;
+                            padding: 10px;
+                            font-size: 24px;
+                            font-family: Agency;
+                            color: white;
+                            text-align: center;
+                            @media #{$md-device} {
+                                font-size: 18px;
+                                padding: 5px;
+                                margin: 5px 0;
+                            }
+                        }
+                        i {
+                            padding: 0 5px;
+                        }
+                        i.noncheck {
+                            color: gray;
+                        }
+                    }
+                    .favorite {
+                        @media #{$sm-device} {
+                            display: none;
+                        }
+                        i {
+                            position: absolute;
+                            bottom: 7%;
+                            right: 2%;
+                            color: white;
+                            font-size: 40px;
+                            cursor: pointer;
+                            @media #{$md-device},
+                            #{$sm-device} {
+                                font-size: 25px;
+                                right: 3%;
+                            }
+                        }
+                    }
+                    iframe {
+                        width: 65%;
+                        height: 500px;
+                        margin-left: auto;
+                        display: table;
+                        @media #{$md-device} {
+                            height: 350px;
+                        }
+                        @media #{$sm-device} {
+                            height: 300px;
+                            width: 100%;
+                        }
+                    }
+                    .cta_buttons {
+                        position: absolute;
+                        top: 55%;
+                        left: 35%;
+                        @media #{$sm-device} {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            top: 0;
+                            left: 0;
+                        }
+                        button {
+                            border-radius: 10px;
+                            background-color: transparent;
+                            color: white;
+                            font-size: 45px;
+                            font-family: ERKN;
+                            border: 2px solid white;
+                            padding: 10px 20px;
+                            @media #{$md-device} {
+                                font-size: 25px;
+                            }
+                            @media #{$sm-device} {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                    .images {
+                        position: absolute;
+                        top: 20%;
+                        left: 30%;
+                        @media #{$lg-device} {
+                            top: 15%;
+                            left: 27%;
+                        }
+                        @media #{$sm-device} {
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                        }
+                        .img_carousel {
+                            display: flex;
+                            img {
+                                width: 200px;
+                                margin: 10px;
+                                border-radius: 5px;
+                                @media #{$sm-device} {
+                                    height: 210px;
+                                }
                             }
                         }
                     }
