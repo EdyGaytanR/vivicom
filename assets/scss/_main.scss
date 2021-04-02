@@ -13,6 +13,12 @@ a {
     border-radius: 30px;
     margin: 40px 20px;
     padding: 10px;
+    @media #{$md-device} {
+        margin: 20px 10px;
+    }
+    @media #{$sm-device} {
+        margin: 20px 0;
+    }
 }
 
 body {
@@ -29,12 +35,6 @@ body {
     margin-bottom: 30px;
     .top_head {
         @include round_bg;
-        @media #{$md-device} {
-            margin: 20px 10px;
-        }
-        @media #{$sm-device} {
-            margin: 20px 0;
-        }
         .title {
             font-size: 80px;
             line-height: normal;
@@ -146,48 +146,47 @@ body {
             &:hover {
                 text-decoration: none;
             }
-            .cta {
-                @include round_bg;
-                width: 60%;
-                margin: 20px auto;
-                display: table;
-                border: 2px white solid;
+            .cta {}
+            @include round_bg;
+            width: 60%;
+            margin: 20px auto;
+            display: table;
+            border: 2px white solid;
+            transition: background .5s ease;
+            @media #{$md-device} {
+                width: 75%;
+            }
+            @media #{$sm-device} {
+                width: 100%;
+            }
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
                 transition: background .5s ease;
+            }
+            .title {
+                font-size: 40px;
+                line-height: normal;
+                font-family: ERKN;
+                color: $white;
+                text-align: center;
                 @media #{$md-device} {
-                    width: 75%;
+                    font-size: 40px;
                 }
                 @media #{$sm-device} {
-                    width: 100%;
+                    font-size: 20px;
                 }
-                &:hover {
-                    background: rgba(0, 0, 0, 0.8);
-                    transition: background .5s ease;
-                }
-                .title {
-                    font-size: 40px;
-                    line-height: normal;
-                    font-family: ERKN;
-                    color: $white;
-                    text-align: center;
-                    @media #{$md-device} {
-                        font-size: 40px;
-                    }
-                    @media #{$sm-device} {
-                        font-size: 20px;
-                    }
-                }
-                .subtitle {
+            }
+            .subtitle {
+                font-size: 30px;
+                line-height: normal;
+                font-family: ERKN;
+                color: $white;
+                text-align: center;
+                @media #{$md-device} {
                     font-size: 30px;
-                    line-height: normal;
-                    font-family: ERKN;
-                    color: $white;
-                    text-align: center;
-                    @media #{$md-device} {
-                        font-size: 30px;
-                    }
-                    @media #{$sm-device} {
-                        font-size: 17px;
-                    }
+                }
+                @media #{$sm-device} {
+                    font-size: 17px;
                 }
             }
         }
@@ -206,6 +205,42 @@ body {
             }
             @media #{$sm-device} {
                 display: none;
+            }
+        }
+    }
+    .credit {
+        .title {
+            font-size: 70px;
+            @media #{$md-device} {
+                font-size: 40px;
+            }
+            @media #{$sm-device} {
+                font-size: 25px;
+            }
+        }
+        .cta_credit {
+            display: flex;
+            justify-content: space-around;
+            @media #{$md-device},
+            #{$sm-device} {
+                flex-wrap: wrap;
+            }
+            a {
+                width: 100%;
+                margin: 40px 20px;
+                padding: 20px;
+                @media #{$md-device},
+                #{$sm-device} {
+                    margin: 20px;
+                    padding: 10px;
+                }
+                p {
+                    font-size: 50px;
+                    @media #{$md-device},
+                    #{$sm-device} {
+                        font-size: 30px;
+                    }
+                }
             }
         }
     }
@@ -478,7 +513,7 @@ body {
                 }
                 .overlay {
                     position: relative;
-                    background-color: rgba(0, 0, 0, 0.35);
+                    background-color: rgba(0, 0, 0, 0.55);
                     height: 100%;
                     width: 100%;
                     .information {
@@ -639,6 +674,78 @@ body {
                             }
                         }
                     }
+                    .appointments {
+                        position: absolute;
+                        top: 15%;
+                        left: 35%;
+                        @media #{$sm-device} {
+                            position: relative;
+                            top: auto;
+                            left: auto;
+                            padding: 10px 20px;
+                        }
+                        form {
+                            input {
+                                @include round_bg;
+                                display: block;
+                                font-size: 20px;
+                                line-height: normal;
+                                font-family: Agency;
+                                color: $white;
+                                text-align: center;
+                                margin: 10px 0;
+                                width: 100%;
+                                border: none;
+                                transition: background .5s ease;
+                                @media #{$md-device},
+                                #{$sm-device} {
+                                    font-size: 16px;
+                                }
+                                &:hover {
+                                    text-decoration: none;
+                                    background: rgba(0, 0, 0, 0.9);
+                                    transition: background .5s ease;
+                                }
+                            }
+                             ::-webkit-calendar-picker-indicator {
+                                filter: invert(1);
+                            }
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                        }
+                        .cta_buttons {
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            button {
+                                border-radius: 10px;
+                                background-color: transparent;
+                                color: white;
+                                font-size: 35px;
+                                font-family: ERKN;
+                                border: 2px solid white;
+                                padding: 10px 20px;
+                                margin: 0 20px;
+                                @media #{$md-device} {
+                                    font-size: 22px;
+                                    margin: 10px;
+                                }
+                                @media #{$sm-device} {
+                                    font-size: 16px;
+                                    margin: 5px;
+                                }
+                            }
+                            button.btn-small {
+                                font-size: 25px;
+                                @media #{$sm-device} {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .slick-next {
@@ -668,6 +775,51 @@ body {
                     &:before {
                         font-size: 25px;
                     }
+                }
+            }
+        }
+    }
+    .black_box {
+        @include round_bg;
+        .thanks_cta {
+            border-radius: 30px;
+            margin: 40px 20px;
+            padding: 10px;
+            width: 60%;
+            margin: 20px auto;
+            display: table;
+            border: 2px white solid;
+            transition: background .5s ease;
+            @media #{$md-device} {
+                width: 75%;
+            }
+            @media #{$sm-device} {
+                width: 100%;
+            }
+            .title {
+                font-size: 40px;
+                line-height: normal;
+                font-family: ERKN;
+                color: $white;
+                text-align: center;
+                @media #{$md-device} {
+                    font-size: 40px;
+                }
+                @media #{$sm-device} {
+                    font-size: 20px;
+                }
+            }
+            .subtitle {
+                font-size: 40px;
+                line-height: normal;
+                font-family: ERKN;
+                color: $white;
+                text-align: center;
+                @media #{$md-device} {
+                    font-size: 30px;
+                }
+                @media #{$sm-device} {
+                    font-size: 17px;
                 }
             }
         }
