@@ -8,6 +8,53 @@ a {
     }
 }
 
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.control-me {
+    width: 100%;
+    position: relative;
+}
+
+.control-me::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f0c8";
+    color: white;
+    font-size: 25px;
+    margin: 0 auto;
+    display: table;
+}
+
+#read:checked~.control-me::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f14a";
+    color: white;
+    font-size: 25px;
+    margin: 0 auto;
+    display: table;
+}
+
 @mixin round_bg {
     background: $black-soft;
     border-radius: 30px;
@@ -146,7 +193,6 @@ body {
             &:hover {
                 text-decoration: none;
             }
-            .cta {}
             @include round_bg;
             width: 60%;
             margin: 20px auto;
@@ -242,6 +288,177 @@ body {
                     }
                 }
             }
+        }
+    }
+    .credit_form {
+        @include round_bg;
+        padding: 20px 10px;
+        .title {
+            font-size: 55px;
+            line-height: normal;
+            font-family: ERKN;
+            color: $white;
+            text-align: center;
+            @media #{$md-device} {
+                font-size: 30px;
+            }
+            @media #{$sm-device} {
+                font-size: 20px;
+            }
+        }
+        .congratulations {
+            font-size: 60px;
+            line-height: normal;
+            font-family: ERKN;
+            color: black;
+            -webkit-text-stroke: 1px yellow;
+            text-align: center;
+            padding: 20px 0;
+            font-weight: 700;
+            letter-spacing: 2px;
+            @media #{$md-device} {
+                font-size: 40px;
+            }
+            @media #{$sm-device} {
+                font-size: 30px;
+            }
+        }
+        .subtitle {
+            font-size: 40px;
+            line-height: normal;
+            font-family: ERKN;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            @media #{$md-device} {
+                font-size: 20px;
+            }
+            @media #{$sm-device} {
+                font-size: 16px;
+            }
+        }
+        form {
+            .flexi_justi {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                @media #{$sm-device} {
+                    display: block;
+                }
+            }
+            label {
+                font-size: 25px;
+                font-family: "Agency";
+                color: white;
+                margin: 0;
+                flex: none;
+                user-select: none;
+                @media #{$md-device} {
+                    font-size: 20px;
+                }
+            }
+            input {
+                @include round_bg;
+                font-size: 30px;
+                line-height: normal;
+                font-family: Agency;
+                color: $white;
+                text-align: center;
+                margin: 10px;
+                padding: 5px 0;
+                width: 100%;
+                border: none;
+                transition: background .5s ease;
+                @media #{$md-device} {
+                    font-size: 20px;
+                    margin: 10px;
+                }
+                @media #{$sm-device} {
+                    font-size: 20px;
+                    margin: 10px 0;
+                    padding: 10px;
+                    text-align: left;
+                }
+                &:hover {
+                    text-decoration: none;
+                    background: rgba(0, 0, 0, 0.9);
+                    transition: background .5s ease;
+                }
+            }
+            input[type="checkbox"] {
+                display: none;
+            }
+            button {
+                background: transparent;
+                width: 100%;
+                margin: 40px 20px;
+                padding: 20px;
+                background: #00000081;
+                border-radius: 30px;
+                margin: 20px;
+                padding: 10px;
+                display: table;
+                border: 2px white solid;
+                transition: background .5s ease;
+                .title {
+                    font-size: 25px;
+                }
+            }
+            .check {
+                @media #{$sm-device} {
+                    display: flex;
+                }
+                label {
+                    @media #{$sm-device} {
+                        width: 80%;
+                    }
+                }
+                .control-me {
+                    @media #{$sm-device} {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+        .score_credit {
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 15px;
+            .approved_credit,
+            .monthly {
+                font-size: 40px;
+                font-family: 'Franklin Gothic';
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                @media #{$md-device} {
+                    font-size: 30px;
+                }
+                @media #{$sm-device} {
+                    font-size: 16px;
+                }
+            }
+        }
+        .adviser {
+            background-color: red;
+            color: white;
+            border: 3px solid white;
+            border-radius: 100px;
+            margin: 20px auto;
+            display: table;
+            padding: 40px;
+            font-size: 40px;
+            @media #{$md-device} {
+                font-size: 30px;
+                padding: 30px;
+            }
+            @media #{$sm-device} {
+                font-size: 20px;
+                padding: 20px;
+            }
+        }
+        a {
+            color: white;
         }
     }
     .departments_list {
@@ -700,20 +917,13 @@ body {
                                 @media #{$md-device},
                                 #{$sm-device} {
                                     font-size: 16px;
+                                    margin: 10px 0;
                                 }
                                 &:hover {
                                     text-decoration: none;
                                     background: rgba(0, 0, 0, 0.9);
                                     transition: background .5s ease;
                                 }
-                            }
-                             ::-webkit-calendar-picker-indicator {
-                                filter: invert(1);
-                            }
-                            input::-webkit-outer-spin-button,
-                            input::-webkit-inner-spin-button {
-                                -webkit-appearance: none;
-                                margin: 0;
                             }
                         }
                         .cta_buttons {
@@ -938,6 +1148,16 @@ body {
                 font-size: 20px;
             }
         }
+    }
+}
+
+.cta_transparent_credit {
+    background: transparent;
+    margin: 20px auto;
+    border: 1px solid white;
+    border-radius: 0 50px 50px 0;
+    @media #{$sm-device} {
+        border-radius: 0;
     }
 }
 
