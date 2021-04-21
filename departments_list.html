@@ -40,38 +40,58 @@
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                   </button>
                 <div id="navbar_search" class="collapse navbar-collapse">
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <a href="">
-                                <p>Casa o Depa</p>
-                            </a>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <select name="select_type" id="">
+                                    <option value="">Tipo</option>
+                                    <option value="Casa">Casa</option>
+                                    <option value="Depa">Depa</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <select name="select_rooms" id="">
+                                    <option value="">Recamaras</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="Mas">Más</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <select name="select_parking" id="">
+                                    <option value="">Estacionamientos</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="Mas">Más</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <select name="select_location" id="">
+                                    <option value="">Delegacion</option>
+                                    <option value="Cuahutemoc">Cuahutemoc</option>
+                                    <option value="Madero">Madero</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <select name="select_bathroom" id="">
+                                    <option value="">Baños</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="Mas">Más</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="number" placeholder="Precio $">
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <input type="submit" value="Buscar">
+                            </div>
                         </div>
-                        <div class="col-12 col-md-4">
-                            <a href="">
-                                <p>Recamaras</p>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <a href="">
-                                <p>Estacionamientos</p>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <a href="">
-                                <p>Delegacion</p>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <a href="">
-                                <p>Baños</p>
-                            </a>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <form action="">
-                                <input type="text" placeholder="Precio $">
-                            </form>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="departments_list">
